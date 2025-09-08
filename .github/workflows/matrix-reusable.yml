@@ -2,15 +2,20 @@ name: Matrix Reusable
 
 on:
   workflow_call:
+    inputs:
+      machine_name:
+        required: true
+        type: string
 
 jobs:
   show-matrix:
     runs-on: ubuntu-latest
     steps:
-    - name: printando todas as maquinas
+    - name: printando a maquina
       run: |
-        echo "${{ matrix.machine }}"
+        echo "${{ inputs.machine_name }}"
 
     - name: printando apenas a primeira maquina
-      if: ${{ contains(matrix.machine, 'b3ftrd01') }}
-      run: echo ${{ contains(matrix.machine, 'b3ftrd01') }}
+      if: ${{ contains(inputs.machine_name, 'b3ftrd01') }}
+      run: |
+        echo "${{ inputs.machine_name }}"
