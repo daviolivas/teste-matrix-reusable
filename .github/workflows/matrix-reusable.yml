@@ -1,0 +1,14 @@
+name: Matrix Reusable
+
+on:
+  workflow_call:
+
+jobs:
+  show-matrix:
+    runs-on: ubuntu-latest
+    steps:
+    - name: printando todas as maquinas
+      run: echo ${{ matrix.machine }}
+
+    - name: printando apenas a primeira maquina
+      run: echo ${{ contains(matrix.machine), 'b3ftrd01' }}
