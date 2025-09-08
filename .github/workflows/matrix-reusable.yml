@@ -11,4 +11,4 @@ jobs:
       run: echo ${{ matrix.machine }}
 
     - name: printando apenas a primeira maquina
-      run: echo ${{ contains(matrix.machine), 'b3ftrd01' }}
+      run: echo ${{ contains(matrix.machine, 'b3ftrd01') }}
