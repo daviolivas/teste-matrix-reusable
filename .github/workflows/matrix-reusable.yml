@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: printando todas as maquinas
-      run: echo ${{ matrix.machine }}
+      run: |
+        echo "${{ matrix.machine }}"
 
     - name: printando apenas a primeira maquina
       if: ${{ contains(matrix.machine, 'b3ftrd01') }}
