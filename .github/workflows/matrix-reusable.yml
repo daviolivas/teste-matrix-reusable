@@ -15,10 +15,10 @@ jobs:
       run: |
         echo "${{ inputs.machine_name }}"
 
-    - name: printando apenas a primeira maquina
-      if: ${{ contains(inputs.machine_name, 'b3ftrd01') }}
-      run: |
-        echo "${{ inputs.machine_name }}"
+#    - name: printando apenas a primeira maquina
+#      if: ${{ contains(inputs.machine_name, 'b3ftrd01') }}
+#      run: |
+#        echo "${{ inputs.machine_name }}"
 
   voice:
     name: job de voice (01)
