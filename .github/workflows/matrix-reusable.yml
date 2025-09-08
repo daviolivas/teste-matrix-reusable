@@ -19,3 +19,12 @@ jobs:
       if: ${{ contains(inputs.machine_name, 'b3ftrd01') }}
       run: |
         echo "${{ inputs.machine_name }}"
+
+  voice:
+    name: job de voice (01)
+    runs-on: ubuntu-latest
+    if: ${{ contains(inputs.machine_name, 'b3ftrd01') }}
+    steps:
+    - name: printando a maquina
+      run: |
+        echo "voice caraio"
